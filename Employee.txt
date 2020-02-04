@@ -1,0 +1,56 @@
+
+public class Employee {
+    private String Firstname;
+    private String Lastname;
+    private int Id;
+    private  int Salary;
+    Employee(){
+        Firstname = "Lee";
+        Lastname = "Nguyen";
+        Id = 2302040;
+        Salary = 2000;
+    }
+    Employee(String Firstname ,String Lastname, int Id, int Salary){
+        this.Firstname =Firstname;
+        this.Lastname=Lastname;
+        this.Id =Id;
+        this.Salary = Salary;
+    }
+    public int getId() {
+        return Id;
+    }
+
+    public String getFirstname() {
+        return Firstname;
+    }
+
+    public String getLastname() {
+        return Lastname;
+    }
+    public String getName(){
+        return Firstname+Lastname;
+    }
+
+    public int getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(int Salary) {
+        this.Salary = Salary;
+    }
+    public int getannualSalary() {
+        return getSalary() * 12;
+    }
+    public int raiseSalary(int percent) {
+        return getannualSalary() * percent/100  + getannualSalary() ;
+    }
+
+    public String toString() {
+
+        return getClass().getName()+"[Id = " + Id +", Name = " + Firstname + Lastname + ", Salary = " +   raiseSalary(10) + "]";
+    }
+
+}
+
+
+

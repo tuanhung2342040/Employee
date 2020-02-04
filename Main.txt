@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args){
+        Employee emp = new Employee("Lee", "Nguyen",2342040,2000);
+        System.out.println("Id: "  + emp.getId());
+        System.out.println("Firstname: " + emp.getFirstname());
+        System.out.println("Lastname: " +emp.getLastname());
+        String empName = emp.getFirstname()  +  emp.getLastname();
+        System.out.println("Name: " + empName);
+        System.out.println("Salary: " +emp.getSalary());
+        System.out.println("Annual Salary:" + emp.getannualSalary());
+        System.out.println(emp.toString());
+
+    }
+}
